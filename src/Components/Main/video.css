@@ -1,0 +1,10 @@
+.video {
+    background-color: rgb(247, 249, 250);
+    width: 58.1%;
+    height: 80%;
+    padding: 15px 15px;
+    border-top: 1px solid #ddd;
+    margin-left: 9%;
+    position: absolute;
+    align-content: center;
+}
