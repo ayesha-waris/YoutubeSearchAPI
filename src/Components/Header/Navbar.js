@@ -1,14 +1,13 @@
 import Center from "./Center";
 import LeftSide from "./LeftSide";
 import RightSide from "./RightSide";
-
+import classes from './Navbar.module.css';
 const Navbar = () => {
   return ( 
-    <div className="header">
+    <div className= {classes.header}>
       
  <LeftSide/>
  <Center/>
- 
  <RightSide/>
  
     </div>

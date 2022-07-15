@@ -1,5 +1,7 @@
-import { Link } from 'react-router-dom';
+import classes from './Sidebar.module.css';
+
 import { useState } from 'react';
+import SideOptions from './SideOptions';
 const Sidebar = () => {
   const icons = [
     'home',
@@ -25,28 +27,16 @@ const Sidebar = () => {
   ];
   const [Active, setActive] = useState(null);
   const [isActive, setIsActive] = useState(false);
-  const handleClick  = (e) =>{
-    if(Active){
-      
-    }
-    else{
+  const handleClick = (e) => {
+    if (Active) {
+    } else {
       console.log(e.target);
     }
-  }
+  };
   return (
-    <div className="side-bar">
-      <div className="nav ">
-        {icons.map((icon, num) => (
-          <div className="nav-link" key={num} > 
-
-          <Link  to="/" 
-          onClick =  {handleClick}>
-           
-            <i className="material-icons">{icon}</i>
-            <span>{iconNames[num]}</span>
-          </Link>
-          </div>
-        ))}
+    <div className={classes.sidebar}>
+      <div className={classes.nav}>
+      <SideOptions icons={icons} iconNames={iconNames} handleClick={handleClick}/>
       </div>
     </div>
   );

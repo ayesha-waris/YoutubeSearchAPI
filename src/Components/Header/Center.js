@@ -1,8 +1,7 @@
+import classes from './Center.module.css';
 import { useState } from 'react';
 import Content from '../Main/Content';
 import axios from 'axios';
-import Suggestion from '../Main/Suggestion';
-import Video from '../Main/Video';
 const Center = () => {
   const [keyword, setKeyword] = useState('');
   const [searchResult, setSearchResult] = useState('');
@@ -33,7 +32,7 @@ const Center = () => {
   };
   return (
     <>
-      <div className="search center">
+      <div className={classes.search}>
         <form onSubmit={handleSubmit}>
           <input
             type="text"
@@ -43,10 +42,10 @@ const Center = () => {
           />
           <button>
             {' '}
-            <i className="material-icons">search</i>
+            <i >search</i>
           </button>
         </form>
-        <i className="material-icons mic">mic</i>
+        <i className={`material-icons ${classes.mic}`}>mic</i>
       </div>
       {console.log(searchResult)}
       {searchResult && <Content searchResult = {searchResult}/>}
