@@ -1,33 +1,17 @@
-
-import './youtube-layout.css';
-
-import './Components/Main/mainStyle.css';
-import './Components/Main/suggestion.css';
-import './Components/Main/video.css';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Navbar from './Components/Header/Navbar';
-import Sidebar from './Components/Main//Sidebar/Sidebar';
+import { Navigate, Route, Routes } from 'react-router-dom';
 
 import './index.css';
-
+import Home from './pages/Home';
+import PlayVideo from './pages/Playvideo';
 
 function App() {
   return (
     <div className="App">
-      
-      <Router>
-      <Navbar/>
-      <Sidebar/>
-        <Routes>
-        <Route path="/"  />
-      {/* <Route path="expenses" element={<Expenses />} />
-      <Route path="video" element={<PlayVideo/>} />  
-             */}
-          
-        </Routes>
-      
-   
-    </Router>
+      <Routes>
+        <Route path="/" element={<Navigate to="/home" />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/video/*" element={<PlayVideo />} />
+      </Routes>
     </div>
   );
 }

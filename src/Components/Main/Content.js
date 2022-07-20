@@ -9,7 +9,17 @@ const Content = (props) => {
     
     
   }
- 
+  // axios({
+  //   method: "get",
+  //   url: `https://www.googleapis.com/youtube/v3/search`,
+  //   params: {
+  //     api_key: YouTube_API_KEY,
+  //     q: keyword,
+  //     maxResults: 5
+  //   },
+  // }).then((response) => {
+  //   console.log(response.data);
+  // });
 
   return (
     <>
@@ -30,11 +40,11 @@ const Content = (props) => {
                     src="https://yt3.ggpht.com/bpzY-S4DYlbTeOpY5hIA7qz_hcbMkgvLAugtwKBGTTImNnWAGudX0y53bo_fJZ0auypxrWkUiw=s88-c-k-c0x00ffffff-no-rj"
                     alt=""
                   />
-                  <href
+                  <Link
                     to={`https://www.youtube.com/channel/ ${result.snippet.channelId}`}
                   >
                     {result.snippet.channelTitle}
-                  </href>
+                  </Link>
                 </div>
               </div>
             </div>

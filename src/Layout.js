@@ -1,8 +1,7 @@
 
 import Navbar from "./Components/Header/Navbar";
-
+import Sidebar from './Components/Main/Sidebar';
 import Content from './Components/Main/Content';
-import Sidebar from "./Components/Main/Sidebar/Sidebar";
 
 
 const YoutubeLayout = () => {
@@ -10,7 +9,7 @@ const YoutubeLayout = () => {
   
   return ( 
     <div>
-<Navbar />
+<Navbar/>
    <main>
      <Sidebar/>
      <Content/>
