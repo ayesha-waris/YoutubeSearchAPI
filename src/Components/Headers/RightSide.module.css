@@ -1,0 +1,15 @@
+.right {
+    display: flex;
+}
+
+.right i {
+    color: rgb(100, 100, 100);
+    padding: 0 7px;
+    cursor: pointer;
+}
+
+.material-icons {
+    color: rgb(100, 100, 100);
+    padding: 0 7px;
+    cursor: pointer;
+}

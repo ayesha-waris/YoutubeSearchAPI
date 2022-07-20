@@ -1,0 +1,21 @@
+.left {
+    display: flex;
+    align-items: center;
+}
+
+.left #menu {
+    padding: 0 7px;
+    cursor: pointer;
+}
+
+.left i {
+    color: rgb(100, 100, 100);
+    padding: 0 7px;
+    cursor: pointer;
+}
+
+.material-icons {
+    color: rgb(100, 100, 100);
+    padding: 0 7px;
+    cursor: pointer;
+}
