@@ -11,11 +11,11 @@ function App() {
     <div >
 
       <Headers/>
-      <SideBar/>
+      
       <Routes>
         <Route path="/" element={<Navigate to="/home" />} />
         <Route path="/home" element={<Home/>} />
-        <Route path="/video/*" element={<PlayVideo />} />
+        <Route path="/video/:id" element={<PlayVideo />} />
       </Routes>
     </div>
   );

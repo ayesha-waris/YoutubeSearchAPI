@@ -1,12 +1,15 @@
 import SearchResult from "../Components/Main/SearchResult";
-import { useContext, useState } from 'react';
-import AuthContext from "../store/search-auth";
+
+import { Fragment } from "react";
+import SideBar from "../Components/SideBar/Sidebar";
 
 const Home = () => {
 
   return ( 
-    
+    <Fragment> 
+      <SideBar/>
      <SearchResult/> 
+     </Fragment>
      
    );
 }

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 const YouTube_API_KEY = "AIzaSyBNuCk59QmbF3kLy9hMNurSQ-2flguVpBw" ;
 const URL ="https://www.googleapis.com/youtube/v3/search";
 
@@ -7,12 +8,14 @@ const URL ="https://www.googleapis.com/youtube/v3/search";
  const AuthContext = React.createContext({
   searchKey: '',
   searchResult: [],
+  playVideo: null,
   onSubmitHandler: (key) => {} 
  });
 
  export const AuthContextProvider = (props) => {
 const [searchKey, setSearchKey] = useState('')
   const [searchResult, setSearchResult] = useState('');
+  const [video, setVideo] = useState(null);
 
   const options = {
     part:"snippet",
@@ -31,9 +34,15 @@ const [searchKey, setSearchKey] = useState('')
    });
  }
 const onSubmitHandler  = (key) => {
-  console.log(searchKey);
+ 
   setSearchKey(key);
   requestSearch();
+ 
+
+};
+
+const playVideo  = (video) => {
+ setVideo (video)
 
 };
    return (
@@ -42,7 +51,9 @@ const onSubmitHandler  = (key) => {
        value={{
          searchKey: searchKey,
          searchResult: searchResult,
-         onSubmitHandler: onSubmitHandler 
+         onSubmitHandler: onSubmitHandler ,
+         playVideo: playVideo,
+         video: video
        }}
      >
        {props.children}

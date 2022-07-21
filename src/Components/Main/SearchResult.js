@@ -1,22 +1,26 @@
 import classes  from './SearchResult.module.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useContext, useState } from 'react';
 import Main from './Main';
 import AuthContext from '../../store/search-auth';
 
 const SearchResult = (searchResult) => {
 
-
+  const navigate = useNavigate();
   const ctx = useContext(AuthContext);
   const render = ctx.searchResult.length>0? true: false ;
-  console.log(ctx.searchResult);
+ console.log(ctx.searchResult);
+  const clickHandler = (video) => {
+    ctx.playVideo(video);
+    navigate(`/video/${video.id.videoId}`);
+  }
   return (
 
     <Main> 
       { render &&  <div className={classes.content}>
         {ctx.searchResult.map((result, num) => (
          
-            <div key={num} className={classes.details}>
+            <div onClick = {() => {clickHandler(result)}} key={num} className={classes.details}>
               <div className={classes.thumbnail}>
                 <img src={result.snippet.thumbnails.default.url} alt="" />
               </div>
