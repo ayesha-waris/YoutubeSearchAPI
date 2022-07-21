@@ -3,7 +3,8 @@
     height: calc(107vh - 70px);
     width: 23%;
     float: right;
-    margin-top: 1.6rem;
+    /* margin-top: 1.6rem; */
+    transform: translateY(6.5%);
 }
 
 .content {
