@@ -1,5 +1,8 @@
-main {
-    height: calc(100vh - 70px);
-    display: flex;
-    background-color: #f9f9f9;
+.main {
+    height: calc(107vh - 70px);
+    /* display: contents;
+    background-color: #f9f9f9; */
+    background-color: antiquewhite;
+    /* height: 100%; */
+    margin-left: 15%;
 }

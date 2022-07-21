@@ -5,8 +5,9 @@
     overflow-y: hidden;
     margin: 0;
     border: 0;
-    transform: translateY(9%);
+    transform: translateY(4%);
     display: inline-block;
+    position: absolute;
 }
 
 .nav {

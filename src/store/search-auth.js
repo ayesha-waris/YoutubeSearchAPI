@@ -34,7 +34,6 @@ const onSubmitHandler  = (key) => {
   console.log(searchKey);
   setSearchKey(key);
   requestSearch();
-  console.log(searchResult);
 
 };
    return (

@@ -2,9 +2,9 @@ import classes from './Main.module.css';
 
 const Main = (props) => {
   return (
-    <div className={classes.main}>
+    <main className={`${classes.main}`}>
       {props.children}
-    </div>
+    </main>
     );
 }
  
