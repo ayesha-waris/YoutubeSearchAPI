@@ -1,5 +1,4 @@
 import { useState, useContext } from "react";
-import axios from "axios";
 import classes from './Center.module.css';
 import AuthContext from "../../store/search-auth";
 const Center = () => {
@@ -7,30 +6,13 @@ const Center = () => {
   const ctx = useContext(AuthContext);
   const [keyword, setKeyword] = useState('');
 
-//   const [searchResult, setSearchResult] = useState('');
 
-//   const YouTube_API_KEY = "AIzaSyBNuCk59QmbF3kLy9hMNurSQ-2flguVpBw" ;
-//   const URL ="https://www.googleapis.com/youtube/v3/search"
- 
-//   const options = {
-//     part:"snippet",
-//     key:YouTube_API_KEY,
-//     maxResults:10,
-//     q:keyword,
-//  };
-//  const requestSearch = () =>{
-//    axios({
-//      method: "get",
-//      url: URL,
-//      params: options,
-//    }).then((response) => {
-//      setSearchResult(response.data.items);
-    
-//    });
-//  }
   const handleSubmit = (e) => {
     e.preventDefault();
-   ctx.onSubmitHandler(keyword);
+    if(keyword.length > 0) {
+      ctx.onSubmitHandler(keyword);
+    }
+   
   };
   return ( 
     <>
@@ -42,7 +24,7 @@ const Center = () => {
             value={keyword}
             onChange={(e) => setKeyword(e.target.value)}
           />
-          <button>
+          <button >
             {' '}
             <i className="material-icons">search</i>
           </button>

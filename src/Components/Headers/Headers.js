@@ -4,12 +4,12 @@ import LeftSide from './LeftSide';
 import RightSide from './RightSide';
 const Headers = () => {
   return (  
-<div className={classes.header}>
+<header className={classes.header}>
       
       <LeftSide/>
       <Center/>
       <RightSide/>
-         </div>
+         </header>
   );
 }
  
